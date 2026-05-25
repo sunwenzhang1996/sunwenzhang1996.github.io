@@ -100,18 +100,15 @@ main {
   text-align: center;
 }
 
-.portrait-placeholder {
-  display: grid;
-  height: 260px;
-  place-items: center;
+.portrait-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 18px;
   background:
     linear-gradient(135deg, rgba(15, 118, 110, 0.9), rgba(14, 82, 76, 0.9)),
     var(--accent);
-  color: white;
-  font-family: "Noto Serif SC", serif;
-  font-size: 3.2rem;
-  font-weight: 700;
 }
 
 .role {
