@@ -254,9 +254,22 @@ h3 {
 }
 
 .news-list {
-  padding: 0;
+  max-height: 250px;
+  padding: 0 12px 0 0;
   margin: 0;
+  overflow-y: auto;
   list-style: none;
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-width: thin;
+}
+
+.news-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.35);
 }
 
 .news-list li {
