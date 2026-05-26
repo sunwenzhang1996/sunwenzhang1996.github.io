@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">A-share multi-agent market radar dashboard</title>
+  <desc id="desc">A warm dashboard mockup for an A-share market multi-agent analysis framework.</desc>
+  <defs>
+    <style>
+      .kicker { font: 700 22px Arial, sans-serif; letter-spacing: 5px; fill: #8a8175; }
+      .title { font: 800 48px Arial, sans-serif; fill: #151515; }
+      .body { font: 24px Arial, sans-serif; fill: #6f665c; }
+      .label { font: 800 26px Arial, sans-serif; fill: #171717; }
+      .small { font: 20px Arial, sans-serif; fill: #776d63; }
+      .chip { font: 18px Arial, sans-serif; fill: #322a22; }
+      .ready { font: 19px Arial, sans-serif; fill: #0b7b52; }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#fbf6ec"/>
+  <rect x="0" y="0" width="1600" height="260" fill="#fbf6ec"/>
+  <line x1="0" y1="260" x2="1600" y2="260" stroke="#ded0bd" stroke-width="4"/>
+
+  <text class="kicker" x="38" y="55">MARKET RADAR</text>
+  <text class="title" x="38" y="112">大盘分析框架</text>
+  <text class="body" x="38" y="154">市场存在较清晰的强势轮动，重点看连续强势方向是否有催化配合。</text>
+
+  <g transform="translate(38 180)">
+    <rect x="0" y="0" width="98" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="49" y="23" text-anchor="middle">原始文档 60</text>
+    <rect x="108" y="0" width="112" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="164" y="23" text-anchor="middle">正文验证 42</text>
+    <rect x="232" y="0" width="68" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="266" y="23" text-anchor="middle">证据 2</text>
+    <rect x="312" y="0" width="104" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="364" y="23" text-anchor="middle">板块 414</text>
+    <rect x="428" y="0" width="136" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="496" y="23" text-anchor="middle">资金流 414/414</text>
+    <rect x="576" y="0" width="124" height="34" rx="17" fill="#efe2ce" stroke="#d7c7b3"/>
+    <text class="chip" x="638" y="23" text-anchor="middle">Tushare ready</text>
+  </g>
+
+  <rect x="38" y="224" width="935" height="92" rx="14" fill="none" stroke="#cdbda8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text class="small" x="58" y="262">信任门槛：只有标题、没有正文的材料只算 headline_only 线索。</text>
+  <text class="small" x="58" y="294">headline-only 文档：18；新闻流：即时 0，近72小时 0，长期政策底座 60。</text>
+
+  <rect x="1020" y="16" width="540" height="192" rx="18" fill="#fffaf2" stroke="#d5c3ad" stroke-width="2"/>
+  <text class="kicker" x="1044" y="50">DATA SOURCE</text>
+  <text class="label" x="1044" y="88">数据源状态</text>
+  <line x1="1044" y1="118" x2="1268" y2="118" stroke="#e4d5c4"/>
+  <line x1="1282" y1="118" x2="1536" y2="118" stroke="#e4d5c4"/>
+  <text class="label" x="1044" y="150" font-size="22">申万行业日线</text>
+  <text class="small" x="1044" y="178">可用  |  30291 行  |  20260525</text>
+  <text class="label" x="1282" y="150" font-size="22">指数日线</text>
+  <text class="small" x="1282" y="178">可用  |  cached:tushare</text>
+
+  <text class="kicker" x="38" y="352">AGENT HEALTH</text>
+  <text class="label" x="38" y="392">Agent 运行状态</text>
+  <rect x="38" y="420" width="1522" height="48" rx="18" fill="none" stroke="#cdbda8" stroke-width="2" stroke-dasharray="6 5"/>
+  <text class="small" x="58" y="452">失败/降级：0/3。这里直接展示所有 GPT Agent 的 provider、模型和错误原文，方便后续换 API。</text>
+
+  <g transform="translate(38 500)">
+    <rect x="0" y="0" width="487" height="260" rx="18" fill="#fffaf2" stroke="#d5c3ad" stroke-width="2"/>
+    <text class="label" x="28" y="52">行业政策新闻 Agent</text>
+    <rect x="392" y="28" width="52" height="30" rx="15" fill="#e0f3df" stroke="#b8d8b4"/>
+    <text class="ready" x="418" y="50" text-anchor="middle">ready</text>
+    <text class="body" x="28" y="96">状态：completed  |  provider：deepseek</text>
+    <text class="body" x="28" y="134">model：deepseek-v4-pro</text>
+    <line x1="28" y1="168" x2="459" y2="168" stroke="#eadfce"/>
+    <text class="small" x="28" y="206">提取行业催化、政策底座与 headline-only 信号。</text>
+  </g>
+
+  <g transform="translate(556 500)">
+    <rect x="0" y="0" width="487" height="260" rx="18" fill="#fffaf2" stroke="#d5c3ad" stroke-width="2"/>
+    <text class="label" x="28" y="52">大盘分析 Agent</text>
+    <rect x="392" y="28" width="52" height="30" rx="15" fill="#e0f3df" stroke="#b8d8b4"/>
+    <text class="ready" x="418" y="50" text-anchor="middle">ready</text>
+    <text class="body" x="28" y="96">状态：ready  |  provider：deepseek</text>
+    <text class="body" x="28" y="134">model：deepseek-v4-pro</text>
+    <line x1="28" y1="168" x2="459" y2="168" stroke="#eadfce"/>
+    <text class="small" x="28" y="206">聚合板块强度、资金流与指数结构，输出方向判断。</text>
+  </g>
+
+  <g transform="translate(1074 500)">
+    <rect x="0" y="0" width="487" height="260" rx="18" fill="#fffaf2" stroke="#d5c3ad" stroke-width="2"/>
+    <text class="label" x="28" y="52">国家队/稳定资金 Agent</text>
+    <rect x="392" y="28" width="52" height="30" rx="15" fill="#e0f3df" stroke="#b8d8b4"/>
+    <text class="ready" x="418" y="50" text-anchor="middle">ready</text>
+    <text class="body" x="28" y="96">状态：active  |  provider：deepseek</text>
+    <text class="body" x="28" y="134">model：deepseek-v4-pro</text>
+    <line x1="28" y1="168" x2="459" y2="168" stroke="#eadfce"/>
+    <text class="small" x="28" y="206">跟踪 ETF、宽基与稳定资金行为，不再盲目接飞刀。</text>
+  </g>
+
+  <text x="800" y="842" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#8a2f1f">i dont want to be jiucai anymore.</text>
+</svg>
