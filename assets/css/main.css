@@ -306,6 +306,33 @@ h3 {
   padding: 22px;
 }
 
+.project {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, #f8f6ee, #eef6f4);
+}
+
+.project-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.project-copy a {
+  margin-top: auto;
+}
+
 .paper-list {
   display: grid;
   gap: 10px;
