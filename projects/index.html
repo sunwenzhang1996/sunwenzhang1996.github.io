@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/main.css?v=20260526-project-images" />
+    <link rel="stylesheet" href="../assets/css/main.css?v=20260526-project-lightbox" />
   </head>
   <body>
     <header class="site-header">
@@ -44,6 +44,60 @@
         </div>
       </section>
     </main>
+    <div class="image-lightbox" hidden aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image preview">Close</button>
+      <img class="lightbox-image" src="" alt="" />
+      <p class="lightbox-caption"></p>
+    </div>
     <footer><p>© 2026 Wenzhang Sun.</p></footer>
+    <script>
+      const lightbox = document.querySelector(".image-lightbox");
+      const lightboxImage = document.querySelector(".lightbox-image");
+      const lightboxCaption = document.querySelector(".lightbox-caption");
+      const closeButton = document.querySelector(".lightbox-close");
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("lightbox-open");
+        lightboxImage.removeAttribute("src");
+      }
+
+      document.querySelectorAll(".project-image").forEach((image) => {
+        image.tabIndex = 0;
+        image.setAttribute("role", "button");
+        image.setAttribute("title", "Click to enlarge");
+
+        function openLightbox() {
+          lightboxImage.src = image.currentSrc || image.src;
+          lightboxImage.alt = image.alt;
+          lightboxCaption.textContent = image.alt;
+          lightbox.hidden = false;
+          lightbox.setAttribute("aria-hidden", "false");
+          document.body.classList.add("lightbox-open");
+          closeButton.focus();
+        }
+
+        image.addEventListener("click", openLightbox);
+        image.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox();
+          }
+        });
+      });
+
+      closeButton.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !lightbox.hidden) {
+          closeLightbox();
+        }
+      });
+    </script>
   </body>
 </html>
