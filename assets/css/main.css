@@ -491,8 +491,9 @@ h3 {
 .cv-meta {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
+  text-align: center;
 }
 
 .cv-item time {
@@ -608,10 +609,5 @@ footer {
   .paper-list.compact,
   .cv-item {
     grid-template-columns: 1fr;
-  }
-
-  .cv-meta {
-    flex-direction: row;
-    align-items: center;
   }
 }
