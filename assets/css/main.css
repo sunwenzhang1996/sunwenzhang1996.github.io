@@ -317,6 +317,48 @@ h3 {
   padding: 22px;
 }
 
+.service-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.service-section .section-title {
+  margin-bottom: 0;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12px 32px rgba(20, 24, 28, 0.05);
+}
+
+.service-item {
+  padding: 20px 22px;
+}
+
+.service-item + .service-item {
+  border-left: 1px solid var(--line);
+}
+
+.service-item p {
+  margin: 0;
+}
+
+.service-label {
+  margin-bottom: 6px !important;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .project {
   display: flex;
   overflow: hidden;
@@ -607,7 +649,14 @@ footer {
   .direction-grid,
   .project-grid,
   .paper-list.compact,
+  .service-section,
+  .service-card,
   .cv-item {
     grid-template-columns: 1fr;
+  }
+
+  .service-item + .service-item {
+    border-top: 1px solid var(--line);
+    border-left: 0;
   }
 }
