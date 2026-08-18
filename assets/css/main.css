@@ -577,7 +577,8 @@ h3 {
 
 .paper {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 264px;
+  grid-template-columns: 264px minmax(0, 1fr);
+  grid-template-areas: "figure copy";
   gap: 28px;
   align-items: center;
   height: 188px;
@@ -592,6 +593,7 @@ h3 {
 
 .paper-copy {
   display: flex;
+  grid-area: copy;
   min-width: 0;
   height: 100%;
   flex-direction: column;
@@ -656,6 +658,7 @@ h3 {
 }
 
 .paper-figure {
+  grid-area: figure;
   width: 264px;
   height: 149px;
   margin: 0;
@@ -857,7 +860,7 @@ footer p {
   }
 
   .paper {
-    grid-template-columns: minmax(0, 1fr) 238px;
+    grid-template-columns: 238px minmax(0, 1fr);
     gap: 22px;
     height: 190px;
   }
@@ -960,6 +963,9 @@ footer p {
 
   .paper {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "figure"
+      "copy";
     gap: 16px;
     height: auto;
     padding: 20px 0 22px;
