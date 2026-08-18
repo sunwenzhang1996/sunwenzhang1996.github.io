@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Attention Contrastive Decoding overview</title>
+  <desc id="desc">A compact schematic showing attention-level contrast before logit-level decoding.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#486563"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" fill="#f4f7f5"/>
+  <text x="56" y="66" fill="#1f2d2c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Attention Contrastive Decoding</text>
+  <text x="56" y="96" fill="#6c7b79" font-family="Arial, sans-serif" font-size="17">Move part of the contrastive operation upstream to preserve coherence.</text>
+
+  <rect x="56" y="184" width="150" height="152" rx="18" fill="#ffffff" stroke="#c9d5d2" stroke-width="2"/>
+  <rect x="82" y="208" width="98" height="68" rx="9" fill="#e8f2ef"/>
+  <circle cx="112" cy="239" r="13" fill="#d5a35f"/>
+  <path d="M134 255l18-20 18 20" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="131" y="305" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="18" font-weight="700">Image + prompt</text>
+
+  <path d="M206 260H296" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="304" y="146" width="278" height="228" rx="22" fill="#ffffff" stroke="#8fb5ae" stroke-width="3"/>
+  <text x="443" y="184" text-anchor="middle" fill="#0f766e" font-family="Arial, sans-serif" font-size="21" font-weight="700">Attention-level contrast</text>
+  <rect x="338" y="213" width="92" height="102" rx="13" fill="#dff0eb"/>
+  <rect x="456" y="213" width="92" height="102" rx="13" fill="#f1e9dc"/>
+  <path d="M355 291c10-43 23-53 58-57" fill="none" stroke="#0f766e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M473 236c22 6 40 24 58 57" fill="none" stroke="#bd7a31" stroke-width="8" stroke-linecap="round"/>
+  <text x="384" y="337" text-anchor="middle" fill="#536663" font-family="Arial, sans-serif" font-size="15">visual evidence</text>
+  <text x="502" y="337" text-anchor="middle" fill="#80684d" font-family="Arial, sans-serif" font-size="15">hallucination cues</text>
+  <text x="443" y="357" text-anchor="middle" fill="#6c7b79" font-family="Arial, sans-serif" font-size="14">adaptive subtraction strategy</text>
+
+  <path d="M582 260H660" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="668" y="184" width="124" height="152" rx="18" fill="#183c3a"/>
+  <text x="730" y="241" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700">LVLM</text>
+  <text x="730" y="269" text-anchor="middle" fill="#cfe5df" font-family="Arial, sans-serif" font-size="15">logit contrast</text>
+  <path d="M704 296h52" stroke="#e9bd73" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M792 260H842" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="877" cy="260" r="35" fill="#dcefe9" stroke="#0f766e" stroke-width="3"/>
+  <path d="M861 260l11 11 22-25" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="877" y="321" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="16" font-weight="700">coherent output</text>
+
+  <rect x="304" y="414" width="488" height="58" rx="16" fill="#e8f2ef"/>
+  <text x="548" y="449" text-anchor="middle" fill="#315651" font-family="Arial, sans-serif" font-size="17">Training-free plug-in · smoother intervention · stronger grounding</text>
+</svg>

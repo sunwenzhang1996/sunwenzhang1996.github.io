@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Disentangled Visual Rectification overview</title>
+  <desc id="desc">A dual-stream schematic separating structural degradation from hallucination drift.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#486563"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" fill="#f4f7f5"/>
+  <text x="54" y="66" fill="#1f2d2c" font-family="Arial, sans-serif" font-size="28" font-weight="700">Disentangled Visual Rectification</text>
+  <text x="54" y="96" fill="#6c7b79" font-family="Arial, sans-serif" font-size="17">Use LIP–SSL differential response to isolate hallucination drift from image corruption.</text>
+
+  <rect x="54" y="190" width="140" height="160" rx="18" fill="#ffffff" stroke="#c9d5d2" stroke-width="2"/>
+  <rect x="78" y="214" width="92" height="68" rx="9" fill="#e7f0ed"/>
+  <circle cx="104" cy="244" r="12" fill="#d5a35f"/>
+  <path d="M126 260l17-19 18 19" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M83 306h82M89 318h70M96 330h56" stroke="#9cadab" stroke-width="3" stroke-linecap="round"/>
+  <text x="124" y="377" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="17" font-weight="700">noised image</text>
+
+  <path d="M194 270H252" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="262" y="148" width="218" height="116" rx="18" fill="#ffffff" stroke="#cfa369" stroke-width="3"/>
+  <text x="371" y="184" text-anchor="middle" fill="#8b5f28" font-family="Arial, sans-serif" font-size="19" font-weight="700">LIP encoder</text>
+  <text x="371" y="214" text-anchor="middle" fill="#6f6558" font-family="Arial, sans-serif" font-size="15">structure degradation</text>
+  <text x="371" y="239" text-anchor="middle" fill="#b45845" font-family="Arial, sans-serif" font-size="15">+ hallucination drift</text>
+
+  <rect x="262" y="294" width="218" height="116" rx="18" fill="#ffffff" stroke="#78aaa0" stroke-width="3"/>
+  <text x="371" y="330" text-anchor="middle" fill="#0f766e" font-family="Arial, sans-serif" font-size="19" font-weight="700">SSL encoder</text>
+  <text x="371" y="369" text-anchor="middle" fill="#536663" font-family="Arial, sans-serif" font-size="15">structure degradation only</text>
+
+  <path d="M480 206H545V253" fill="none" stroke="#8b5f28" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M480 352H545V287" fill="none" stroke="#0f766e" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <circle cx="565" cy="270" r="46" fill="#ffffff" stroke="#53726d" stroke-width="3"/>
+  <text x="565" y="264" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="28" font-weight="700">LIP</text>
+  <text x="565" y="293" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="24">− SSL</text>
+  <text x="565" y="346" text-anchor="middle" fill="#0f766e" font-family="Arial, sans-serif" font-size="15" font-weight="700">purified direction</text>
+
+  <path d="M611 270H680" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="690" y="177" width="156" height="186" rx="20" fill="#183c3a"/>
+  <text x="768" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="700">Dual-stream DVR</text>
+  <rect x="714" y="242" width="108" height="38" rx="10" fill="#315d58"/>
+  <text x="768" y="266" text-anchor="middle" fill="#e5f2ee" font-family="Arial, sans-serif" font-size="14">visual rectification</text>
+  <rect x="714" y="294" width="108" height="38" rx="10" fill="#315d58"/>
+  <text x="768" y="318" text-anchor="middle" fill="#e5f2ee" font-family="Arial, sans-serif" font-size="14">decoding contrast</text>
+
+  <path d="M846 270H888" fill="none" stroke="#486563" stroke-width="4" marker-end="url(#arrow)"/>
+  <circle cx="914" cy="270" r="27" fill="#dcefe9" stroke="#0f766e" stroke-width="3"/>
+  <path d="M901 270l9 9 17-20" fill="none" stroke="#0f766e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="914" y="321" text-anchor="middle" fill="#243331" font-family="Arial, sans-serif" font-size="15" font-weight="700">grounded</text>
+
+  <rect x="262" y="450" width="584" height="52" rx="15" fill="#e8f2ef"/>
+  <text x="554" y="482" text-anchor="middle" fill="#315651" font-family="Arial, sans-serif" font-size="17">Preserve valid visual semantics while suppressing hallucinations</text>
+</svg>
