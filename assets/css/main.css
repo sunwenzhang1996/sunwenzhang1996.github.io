@@ -52,6 +52,12 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
+a:focus-visible,
+.news-panel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
 .site-header {
   position: sticky;
   z-index: 20;
@@ -336,14 +342,33 @@ h3 {
   text-transform: uppercase;
 }
 
-.two-col {
+.home-updates-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
-  gap: 64px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 48px;
+  padding-bottom: 0;
+}
+
+.home-news {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.home-updates-grid .section-title {
+  margin-bottom: 22px;
+}
+
+.home-sidebar {
+  display: grid;
+  min-width: 0;
+  gap: 36px;
 }
 
 .news-panel {
-  height: 258px;
+  flex: 1;
+  height: 0;
+  min-height: 360px;
   overflow-y: auto;
   border-top: 1px solid var(--line-strong);
   border-bottom: 1px solid var(--line-strong);
@@ -406,43 +431,65 @@ h3 {
   color: var(--muted);
 }
 
-.service-section {
-  display: grid;
-  grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
-  gap: 48px;
-  align-items: start;
+.home-service {
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
 }
 
-.service-section .section-title {
-  margin-bottom: 0;
+.home-service h2 {
+  font-size: 1.65rem;
 }
 
-.service-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+.home-service .kicker {
+  margin-bottom: 8px;
 }
 
-.service-item {
-  padding: 18px 20px;
+.review-group + .review-group {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
 }
 
-.service-item + .service-item {
-  border-left: 1px solid var(--line);
-}
-
-.service-item p {
-  margin: 0;
-}
-
-.service-label {
-  margin-bottom: 6px !important;
-  color: var(--accent);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+.review-label {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
+}
+
+.review-venues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-venues li {
+  padding: 5px 12px;
+  border: 1px solid #dce7ea;
+  border-radius: 4px;
+  background: #f3f7f8;
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.review-journal {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.review-journal span {
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 .project-grid {
@@ -949,12 +996,10 @@ footer p {
     padding: 46px 0;
   }
 
-  .two-col,
+  .home-updates-grid,
   .direction-grid,
   .project-grid,
   .paper-list.compact,
-  .service-section,
-  .service-card,
   .cv-item {
     grid-template-columns: 1fr;
   }
@@ -965,17 +1010,20 @@ footer p {
     max-width: none;
   }
 
-  .two-col {
-    gap: 50px;
+  .home-updates-grid {
+    gap: 36px;
+    padding-bottom: 0;
   }
 
-  .service-section {
-    gap: 24px;
+  .news-panel {
+    flex: none;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
   }
 
-  .service-item + .service-item {
-    border-top: 1px solid var(--line);
-    border-left: 0;
+  .home-service {
+    padding: 22px;
   }
 
   .paper {

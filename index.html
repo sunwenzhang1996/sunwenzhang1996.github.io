@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+SC:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/main.css?v=20260818-editorial" />
+    <link rel="stylesheet" href="./assets/css/main.css?v=20261018-academic-service" />
   </head>
   <body>
     <header class="site-header">
@@ -90,13 +90,13 @@
         </div>
       </section>
 
-      <section class="section two-col">
-        <div>
+      <div class="section home-updates-grid">
+        <section class="home-news" aria-labelledby="news-heading">
           <div class="section-title">
             <p class="kicker">news</p>
-            <h2>Recent updates</h2>
+            <h2 id="news-heading">Recent updates</h2>
           </div>
-          <div class="news-panel">
+          <div class="news-panel" role="region" aria-labelledby="news-heading" tabindex="0">
             <ul class="news-list">
               <li><time datetime="2026-08">2026.08</time><span>MUSE accepted to the ACM Multimedia Workshop on Agentic Multimodal Intelligence 2026.</span></li>
               <li><time datetime="2026-07">2026.07</time><span>SeMo accepted to ACM MM 2026 (Oral).</span></li>
@@ -110,39 +110,46 @@
               <li><time datetime="2025-02">2025.02</time><span>MoEE accepted to CVPR 2025.</span></li>
             </ul>
           </div>
-        </div>
-        <div>
-          <div class="section-title">
-            <p class="kicker">selected work</p>
-            <h2>Current focus</h2>
-          </div>
-          <div class="highlight-card">
-            <h3>Interactive digital humans and world models</h3>
-            <p>
-              I am exploring real-time interactive digital-human generation for
-              continuous multimodal dialogue, as well as 4D-guided video
-              generation world models.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+        <div class="home-sidebar">
+          <section aria-labelledby="focus-heading">
+            <div class="section-title">
+              <p class="kicker">selected work</p>
+              <h2 id="focus-heading">Current focus</h2>
+            </div>
+            <div class="highlight-card">
+              <h3>Interactive digital humans and world models</h3>
+              <p>
+                I am exploring real-time interactive digital-human generation for
+                continuous multimodal dialogue, as well as 4D-guided video
+                generation world models.
+              </p>
+            </div>
+          </section>
 
-      <section class="section service-section">
-        <div class="section-title">
-          <p class="kicker">professional service</p>
-          <h2>Peer Review</h2>
+          <section class="home-service" aria-labelledby="service-heading">
+            <div class="section-title">
+              <p class="kicker">professional service</p>
+              <h2 id="service-heading">Peer Review</h2>
+            </div>
+            <div class="review-group">
+              <h3 class="review-label" id="conference-review-heading">Conference Reviewer</h3>
+              <ul class="review-venues" aria-labelledby="conference-review-heading">
+                <li>NeurIPS</li>
+                <li>ICLR</li>
+                <li>CVPR</li>
+                <li>ECCV</li>
+                <li>AAAI</li>
+                <li>ICASSP</li>
+              </ul>
+            </div>
+            <div class="review-group">
+              <h3 class="review-label">Journal Reviewer</h3>
+              <p class="review-journal">IEEE Transactions on Multimedia <span>(TMM)</span></p>
+            </div>
+          </section>
         </div>
-        <div class="service-card">
-          <div class="service-item">
-            <p class="service-label">Conference Reviewer</p>
-            <p>NeurIPS · CVPR · ECCV · AAAI</p>
-          </div>
-          <div class="service-item">
-            <p class="service-label">Journal Reviewer</p>
-            <p>IEEE Transactions on Multimedia (TMM)</p>
-          </div>
-        </div>
-      </section>
+      </div>
 
     </main>
 
