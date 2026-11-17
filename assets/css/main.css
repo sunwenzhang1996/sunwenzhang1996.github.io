@@ -160,6 +160,7 @@ main {
 
 .profile-links {
   display: flex;
+  margin-top: 24px;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 8px 18px;
@@ -289,6 +290,26 @@ h3 {
 
 .section-title {
   margin-bottom: 30px;
+}
+
+.publications-section {
+  scroll-margin-top: 110px;
+}
+
+.publications-section .section-title > p:not(.kicker) {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.publication-year + .publication-year {
+  margin-top: 40px;
+}
+
+.publication-year > h3 {
+  color: var(--accent-dark);
+  font-family: "Source Serif 4", "Noto Serif SC", serif;
+  font-size: 1.35rem;
 }
 
 .direction-grid,
@@ -647,7 +668,8 @@ h3 {
   flex-direction: column;
 }
 
-.paper h3 {
+.paper h3,
+.paper h4 {
   display: -webkit-box;
   margin: 0;
   overflow: hidden;
@@ -963,13 +985,13 @@ footer p {
   .portrait-card {
     display: grid;
     grid-template-columns: 132px minmax(0, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     gap: 10px 22px;
     max-width: 430px;
   }
 
   .portrait-image {
-    grid-row: 1 / 3;
+    grid-row: 1;
     width: 132px;
     box-shadow: 7px 7px 0 var(--accent-soft);
   }
@@ -980,7 +1002,8 @@ footer p {
   }
 
   .profile-links {
-    align-self: start;
+    align-self: center;
+    margin-top: 0;
   }
 
   .hero-copy {
@@ -1042,6 +1065,7 @@ footer p {
   }
 
   .paper h3,
+  .paper h4,
   .paper p {
     display: block;
     overflow: visible;
